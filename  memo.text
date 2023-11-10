@@ -1,0 +1,64 @@
+Action Folder => contains all the action pages(collect all data from the form)
+Classes Folder => contains all class files (the logic of the application,CRUD)
+View Folder => contains the UI (user interface),e.g. HTML + Bootstrap
+
+GIT COMMANDS:
+1) create github repository
+2) Initialize the git connection
+    CMD :   git init
+    CMD :   git add .
+3) naming the code version
+     
+4) connect the version to the github respository
+    CMD :   git remote add origin <URL>
+5) push the changes to github repository
+    CMD :   git push -u origin main
+
+To push the succeeding code changes or versions
+    CMD :   git add .
+    CMD :   git commit -m "Masahiro"
+    CMD :   git push origin main
+
+git config --global user.email "masahiro.suyama@gmail.com"
+git config --global user.name "masahiro-suyama"
+
+// git code //
+
+git clone https://github.com/kredoIT/project-setup.git
+cd laravel-practice 
+
+cp .env.template .env
+
+sudo rm- rf ./backend
+
+make create-project
+
+//To migrate/create the tables Laravel has by default
+docker-compose exec app php artisan migrate
+
+Laravel COMMANDS
+- To display the route list of the application
+DOCKER: docker-compose exec app php artisan route:list
+LOCAL: php artisan route:list
+
+
+- To create a controller
+DOCKER: docker-compose exec app php artisan make:controller PostController
+LOCAL: php artisan make:controller PostController
+
+- To create amigration
+DOCKER: docker-compose exec app php artisan make:migration create_posts_table
+LOCAL:
+
+- To migrate the schema
+DOCKER: docker-compose exec app php artisan migrate
+LOCAL:
+
+- To check the miguration status
+DOCKER: docker-compose exec app php artisan migrate:status
+LOCAL:
+
+- To Create a modele
+DOCKER: docker-compose exec app php artisan migrate:status
+LOCAL:
+
